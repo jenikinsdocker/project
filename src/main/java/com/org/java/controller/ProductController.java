@@ -22,13 +22,13 @@ public class ProductController {
 	@Autowired
 	private ProductService productService;
 	
-	@PostMapping("/save")
+	@PostMapping(value ="/save")
 	public ResponseEntity<Product> saveProduct(@RequestBody Product product){
 		Product products=productService.saveProductDetails(product);
 		return new ResponseEntity<>(products, HttpStatus.CREATED);
 		
 	}
-	@GetMapping("/findAll")
+	@GetMapping(value ="/findAll")
 	public ResponseEntity<Product> findAllProdcuts(){
 		List<Product> products=productService.findAllProducts();
 		return new ResponseEntity(products, HttpStatus.OK);
