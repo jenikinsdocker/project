@@ -15,7 +15,7 @@ import com.org.java.entity.Product;
 import com.org.java.service.ProductService;
 
 @RestController
-@RequestMapping("/product")
+@RequestMapping(value = "/")
 public class ProductController {
 	
 	
