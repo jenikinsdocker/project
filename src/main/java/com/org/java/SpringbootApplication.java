@@ -6,7 +6,6 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
-@ComponentScan(basePackages = "{com.org.java.controller}")
 public class SpringbootApplication extends SpringBootServletInitializer{
  
 	@Override

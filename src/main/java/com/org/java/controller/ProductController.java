@@ -16,20 +16,20 @@ import com.org.java.entity.Product;
 import com.org.java.service.ProductService;
 
 @RestController
-@RequestMapping(value = "/product")
+@RequestMapping("/product")
 public class ProductController {
 	
 	
 	@Autowired
 	private ProductService productService;
 
-	@PostMapping(value= "/save")
+	@PostMapping(value="/save")
 	public ResponseEntity<Product> saveProduct(@RequestBody Product product){
 		Product products=productService.saveProductDetails(product);
 		return new ResponseEntity<>(products, HttpStatus.CREATED);
 		
 	}
-	@GetMapping(value= "/findAll")
+	@GetMapping(value="/findAll")
 	public ResponseEntity<Product> findAllProdcuts(){
 		List<Product> products=productService.findAllProducts();
 		return new ResponseEntity(products, HttpStatus.OK);
