@@ -65,7 +65,7 @@
 	</dependencies>
 	
 	<build>
-		<finalName>springbootapplication-test</finalName>
+		<finalName>springboot-test</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
