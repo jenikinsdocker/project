@@ -15,19 +15,13 @@ import com.org.java.entity.Product;
 import com.org.java.service.ProductService;
 
 @RestController
-@RequestMapping(value = "/")
+@RequestMapping(value = "/product")
 public class ProductController {
 	
 	
 	@Autowired
 	private ProductService productService;
-	
-	@GetMapping(value= "/test")
-	public String test() {
-		return "hello testd application";
-		
-	}
-	
+
 	@PostMapping(value= "/save")
 	public ResponseEntity<Product> saveProduct(@RequestBody Product product){
 		Product products=productService.saveProductDetails(product);
