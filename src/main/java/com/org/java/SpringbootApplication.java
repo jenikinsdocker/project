@@ -4,11 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
-@RestController
+@ComponentScan(basePackages = "{com.org.java.controller}")
 public class SpringbootApplication extends SpringBootServletInitializer{
  
 	@Override
@@ -20,10 +18,5 @@ public class SpringbootApplication extends SpringBootServletInitializer{
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
 	
-	@GetMapping(value= "/")
-	public String test() {
-		return "hello testd application";
-		
-	}
 
 }
