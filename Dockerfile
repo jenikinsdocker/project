@@ -1,4 +1,4 @@
 FROM openjdk:17
 EXPOSE 8080
-ADD target/springboot-dev-integration.jar springboot-dev-integration.jar
-ENTRYPOINT ["java","-jar","/springboot-dev-integration"]
+ADD target/docker-dev-integration.jar docker-dev-integration.jar
+ENTRYPOINT ["java","-jar","/docker-dev-integration"]
