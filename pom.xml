@@ -6,7 +6,7 @@
 	<groupId>com.org.java</groupId>
 	<artifactId>springboot-dev-integration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<!--<packaging>war</packaging>-->
 	<name>SpringbootApplication</name>
 	<description>Demo project for Spring Boot</description>
 	
