@@ -1,4 +1,4 @@
 FROM openjdk:17
-EXPOSE 8080
 ADD target/springboot-test.jar springboot-test.jar
-ENTRYPOINT ["java","-jar","/springboot-test.jar"]
+EXPOSE 8081
+ENTRYPOINT ["sh", "-c", "java ${JAVA_OPTS} -jar springboot-test.jar"]
