@@ -4,10 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<groupId>com.org.java</groupId>
-	<artifactId>docker-dev-integration</artifactId>
+	<artifactId>java-docker-jenkins-integration</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<!--<packaging>war</packaging>-->
-	<name>docker-dev-integration</name>
+	<name>java-docker-jenkins-integration</name>
 	<description>Demo project for Spring Boot</description>
 	
 	<parent>
@@ -59,7 +59,7 @@
 	</dependencies>
 	
 	<build>
-		<finalName>docker-dev-integration</finalName>
+		<finalName>java-docker-jenkins-integration</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -72,21 +72,6 @@
 						</exclude>
 					</excludes>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<goals>
-							<goal>build-info</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>pl.project13.maven</groupId>
-				<artifactId>git-commit-id-plugin</artifactId>
 			</plugin>
 			
 		</plugins>
