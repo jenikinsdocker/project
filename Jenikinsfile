@@ -21,8 +21,8 @@ pipeline {
          stage('Push image to Hub'){
             steps{
                 script{
-                withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'token')])  {
-                bat 'docker login -u srinu255 -p ${token}'
+                withCredentials([string(credentialsId: 'javadockerhub', variable: 'javadockerhub')])  {
+                bat 'docker login -u srinu255 -p ${javadockerhub}'
  }
                 bat 'docker push srinu255/java-docker-jenkins-integration'
                 }
