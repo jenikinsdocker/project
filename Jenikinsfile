@@ -13,7 +13,7 @@ pipeline {
         stage('Build docker image'){
             steps{
                 script{
-                    bat 'docker build -t srinu255/docker-dev-integration .'
+                    bat 'docker build -t srinu255/java-docker-jenkins-integration .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                 withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'token')])  {
                 bat 'docker login -u srinu255 -p ${token}'
  }
-                bat 'docker push srinu255/docker-dev-integration'
+                bat 'docker push srinu255/java-docker-jenkins-integration'
                 }
             }
         }
